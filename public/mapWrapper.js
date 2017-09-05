@@ -21,6 +21,12 @@ MapWrapper.prototype.addMarker = function(coords) {
   });
 };
 
+MapWrapper.prototype.setCenter = function(){
+  var edinburgh = {lat: 55.957806, lng: -3.21809}
+    this.googleMap.setCenter(edinburgh);
+  
+}
+
 MapWrapper.prototype.addClickEvent = function(){
   google.maps.event.addListener(this.googleMap, 'click', function(event){
     var coords = {lat: event.latLng.lat(), lng: event.latLng.lng()}
