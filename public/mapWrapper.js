@@ -6,14 +6,14 @@ var MapWrapper = function(container,coords,zoom) {
   this.markers = [];
 }
 
-MapWrapper.prototype.addMarker = function(coords) {
+MapWrapper.prototype.addMarker = function(coords, text) {
   var marker = new google.maps.Marker({
     position: coords,
     map: this.googleMap
   });
 
   var infoWindow = new google.maps.InfoWindow({
-    content: "Hello"
+    content: text
   });
   this.markers.push(marker);
   marker.addListener('click', function(){
