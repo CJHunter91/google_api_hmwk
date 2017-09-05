@@ -24,6 +24,7 @@ MapWrapper.prototype.addMarker = function(coords, text) {
 MapWrapper.prototype.setCenter = function(){
   var edinburgh = {lat: 55.957806, lng: -3.21809}
     this.googleMap.setCenter(edinburgh);
+    this.googleMap.setZoom(16)
   
 }
 
